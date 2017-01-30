@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @NitikaRaturi
- Unwatch 1
-  Star 0
-  Fork 0 NitikaRaturi/test-test
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Branch: master Find file Copy pathtest-test/index.html
-6537dc3  a minute ago
-@NitikaRaturi NitikaRaturi Update index.html
-1 contributor
-RawBlameHistory     
-75 lines (65 sloc)  2.59 KB
 <html>
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -22,65 +5,29 @@ RawBlameHistory
 <script>
 	
 	$(document).ready(function() {
-$('#score').css('display','none');
-$('#txt').val('0');
-$('#TotalQuestxt').val('0')
-for (i = 0; i <=21; i++) {
-     if(i=='0')
-     {var radioBtn = $('<div style="width: 100%;"><span class="snoheader">Sno</span><span class="yesclsheader">Yes</span><span class="noclsheader">No</span></div>');}
- else
- {
-    var radioBtn = $('<div style="width: 100%;"><span class="sno">'+i+'</span><span class="yescls"><input type="radio" name="ques'+i+'"" id="idyes'+i+'" value="1"/></span><span class="nocls"><input type="radio" name="ques'+i+'" id="idno'+i+'"value="0"/></span></div>');
-}
-    radioBtn.appendTo('#target');
-}
-  /*$('input[type=button]').click(function(){
-     if($('input[type=radio]').is(":checked")){alert("hello")}
-});*/
-$('input[type=radio]').click(function(){
-checkbutton();
-var txtvalue=parseInt($('#txt').val());
-var txtquestion=0;
-txtquestion=parseInt($('#TotalQuestxt').val())+1;
-  txtvalue=txtvalue+parseInt($(this).val());
-	$('#txt').val(txtvalue) 
-$('#TotalQuestxt').val(txtquestion);
+   $('#btnStatus').click(function(){
+      var isChecked = $('#id1').is(':checked');
+      alert(isChecked);
+   });
 });
-$('#btnStatus').click(function(){ $("#target").css("display","none"); 
-$("#score").css("display","block");
-$('.bttn').css("display","none");
-$("#score").html("You have Scored "+$("#TotalQuestxt").val())
-});
-});
-	function checkbutton(){
-		if($('#TotalQuestxt').val()=='20')
-		{
-			$('#btnStatus').css({background: "#524e4e",color: "#ffffff",cursor: "pointer"});
-			$('#btnStatus').css("pointer-events","auto");
-		}
-	}
 </script>
 <style>
-* {font-family: 'Roboto Condensed', sans-serif;}
-div#target {width: 40%;background: #f7f7f0;text-align: center;padding-bottom: 1%;margin-left: 29%;}
-.bttn {width: 40%;background: #9c9c98;text-align: center;padding: 1% 0px;margin-left: 29%;     border-top: 2px solid #000000;}
-span.nocls,span.yescls,span.sno,span.noclsheader,span.yesclsheader,span.snoheader{padding: 0% 10%;}
-input#btnStatus {background: #cac8c8;color: #808080; pointer-events: none;cursor: none;border: 1px solid;padding: 7px;}
-div#score {font-size: 34px;font-weight: bold;text-align: center;padding: 2%;}
-input#TotalQuestxt {display: none;}
-input#txt {display: none;}
-.header {width: 40%;background: #9c9c98;text-align: center;padding: 1% 0px;color: #ffffff;margin-left: 29%;border-bottom: 2px solid #000000;}
+.maindiv{width: 40%; background-color: #efe6e7; text-align: center;margin-left: 25%}
+.answersheet{background-color: #efe6e7; text-align: center}}
 </style>
 </head>
 <body>
-<div class=header> Answer list</div>
-<input type=text id=txt>
-<input type=text id=TotalQuestxt>
-<div id=score>You have scored</div>
-<div id="target"></div>
-<div class=bttn><input type="button" id="btnStatus" value="Click Here" /></div>
+<div class=maindiv>
+<div>Answer Sheet</div><br>
+<div class=answersheet>
+<div><span style="float:left; width: 45%"><span>YES</span><br><input type="radio" id="id1" name="yesno" value="1"></span><span><span>NO</span><br><input type="radio" id="id2" name="yesno" value="0"></span></div>
+<div><div style="float:left; width: 45%"><input type="radio" id="id3" name="yesno1"></div><div>
+<input type="radio" id="id4" name="yesno1"></div></div>
+<div><div style="float:left; width: 45%"><input type="radio" id="id5" name="yesno2"></div><div>
+<input type="radio" id="id6" name="yesno2"></div></div>
+<div><div style="float:left; width: 45%"><input type="radio" id="id7" name="yesno3"></div><div>
+<input type="radio" id="id8" name="yesno3"></div></div>
+<input type="button" id="btnStatus" value="Click Here" />  
 </div>
 </body>
 </html>
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
