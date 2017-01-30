@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @NitikaRaturi
+ Unwatch 1
+  Star 0
+  Fork 0 NitikaRaturi/test-test
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathtest-test/index.html
+6537dc3  a minute ago
+@NitikaRaturi NitikaRaturi Update index.html
+1 contributor
+RawBlameHistory     
+75 lines (65 sloc)  2.59 KB
 <html>
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -8,7 +25,6 @@
 $('#score').css('display','none');
 $('#txt').val('0');
 $('#TotalQuestxt').val('0')
-
 for (i = 0; i <=21; i++) {
      if(i=='0')
      {var radioBtn = $('<div style="width: 100%;"><span class="snoheader">Sno</span><span class="yesclsheader">Yes</span><span class="noclsheader">No</span></div>');}
@@ -18,7 +34,6 @@ for (i = 0; i <=21; i++) {
 }
     radioBtn.appendTo('#target');
 }
-
   /*$('input[type=button]').click(function(){
      if($('input[type=radio]').is(":checked")){alert("hello")}
 });*/
@@ -28,25 +43,20 @@ var txtvalue=parseInt($('#txt').val());
 var txtquestion=0;
 txtquestion=parseInt($('#TotalQuestxt').val())+1;
   txtvalue=txtvalue+parseInt($(this).val());
-
 	$('#txt').val(txtvalue) 
-
 $('#TotalQuestxt').val(txtquestion);
 });
-
 $('#btnStatus').click(function(){ $("#target").css("display","none"); 
 $("#score").css("display","block");
 $('.bttn').css("display","none");
 $("#score").html("You have Scored "+$("#TotalQuestxt").val())
 });
 });
-
 	function checkbutton(){
 		if($('#TotalQuestxt').val()=='20')
 		{
 			$('#btnStatus').css({background: "#524e4e",color: "#ffffff",cursor: "pointer"});
 			$('#btnStatus').css("pointer-events","auto");
-
 		}
 	}
 </script>
@@ -72,3 +82,5 @@ input#txt {display: none;}
 </div>
 </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
